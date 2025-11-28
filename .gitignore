@@ -1,0 +1,62 @@
+# Python virtual environment
+venv/
+env/
+ENV/
+.venv/
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Vector database and embeddings
+policy_vector_db/
+compliance_chroma_db/
+*.db
+*.sqlite
+
+# Checkpoints and caches
+checkpoints/
+embedding_cache/
+*.pkl
+*.cache
+
+# API keys and secrets
+.env
+*.key
+*_key.txt
+
+# Large data files - keep task2.pdf but ignore other PDFs
+*.pdf
+!task2.pdf
+
+# Compliance results
+compliance_results/
+*.json
+!compliance_rules.json
+
+# IDE settings
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/

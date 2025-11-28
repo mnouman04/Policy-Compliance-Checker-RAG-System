@@ -1,0 +1,148 @@
+{
+  "compliance_rules": [
+    {
+      "rule_id": "R001",
+      "category": "Data Protection",
+      "rule_name": "Personal Data Collection Consent",
+      "description": "All personal data collection must have explicit user consent documented",
+      "keywords": ["consent", "personal data", "user agreement", "opt-in", "authorization"],
+      "severity": "critical"
+    },
+    {
+      "rule_id": "R002",
+      "category": "Data Protection",
+      "rule_name": "Data Retention Period",
+      "description": "Clear data retention periods must be specified for all collected information",
+      "keywords": ["retention", "data storage", "deletion", "archival", "time period"],
+      "severity": "high"
+    },
+    {
+      "rule_id": "R003",
+      "category": "Data Protection",
+      "rule_name": "Third-Party Data Sharing",
+      "description": "Any third-party data sharing must be explicitly disclosed and consented to",
+      "keywords": ["third party", "data sharing", "disclosure", "partners", "vendors"],
+      "severity": "critical"
+    },
+    {
+      "rule_id": "R004",
+      "category": "Intellectual Property",
+      "rule_name": "IP Ownership Clause",
+      "description": "Intellectual property ownership must be clearly defined in all contracts",
+      "keywords": ["intellectual property", "IP rights", "ownership", "copyright", "patent"],
+      "severity": "high"
+    },
+    {
+      "rule_id": "R005",
+      "category": "Intellectual Property",
+      "rule_name": "Work Product Assignment",
+      "description": "Work products and deliverables must have clear assignment of rights",
+      "keywords": ["work product", "deliverables", "assignment", "rights transfer"],
+      "severity": "medium"
+    },
+    {
+      "rule_id": "R006",
+      "category": "Liability & Indemnification",
+      "rule_name": "Limitation of Liability",
+      "description": "Contracts must include reasonable limitation of liability clauses",
+      "keywords": ["liability limit", "cap", "damages", "maximum liability"],
+      "severity": "high"
+    },
+    {
+      "rule_id": "R007",
+      "category": "Liability & Indemnification",
+      "rule_name": "Indemnification Obligations",
+      "description": "Indemnification responsibilities must be clearly stated for both parties",
+      "keywords": ["indemnify", "hold harmless", "defend", "indemnification"],
+      "severity": "high"
+    },
+    {
+      "rule_id": "R008",
+      "category": "Termination",
+      "rule_name": "Termination Notice Period",
+      "description": "Contract termination must specify minimum notice period requirements",
+      "keywords": ["termination", "notice period", "cancellation", "end date"],
+      "severity": "medium"
+    },
+    {
+      "rule_id": "R009",
+      "category": "Termination",
+      "rule_name": "Post-Termination Obligations",
+      "description": "Obligations after contract termination must be explicitly defined",
+      "keywords": ["post-termination", "surviving obligations", "after termination"],
+      "severity": "medium"
+    },
+    {
+      "rule_id": "R010",
+      "category": "Payment Terms",
+      "rule_name": "Payment Schedule Definition",
+      "description": "Clear payment schedules and amounts must be specified",
+      "keywords": ["payment", "invoice", "fee", "compensation", "billing"],
+      "severity": "high"
+    },
+    {
+      "rule_id": "R011",
+      "category": "Payment Terms",
+      "rule_name": "Late Payment Penalties",
+      "description": "Late payment terms and penalties should be clearly stated",
+      "keywords": ["late payment", "penalty", "interest", "overdue"],
+      "severity": "low"
+    },
+    {
+      "rule_id": "R012",
+      "category": "Confidentiality",
+      "rule_name": "Confidentiality Definition",
+      "description": "Confidential information must be clearly defined in the agreement",
+      "keywords": ["confidential", "proprietary", "trade secret", "non-disclosure"],
+      "severity": "critical"
+    },
+    {
+      "rule_id": "R013",
+      "category": "Confidentiality",
+      "rule_name": "Confidentiality Duration",
+      "description": "Duration of confidentiality obligations must be specified",
+      "keywords": ["confidentiality period", "duration", "term of confidentiality"],
+      "severity": "high"
+    },
+    {
+      "rule_id": "R014",
+      "category": "Dispute Resolution",
+      "rule_name": "Governing Law",
+      "description": "The governing law and jurisdiction must be clearly stated",
+      "keywords": ["governing law", "jurisdiction", "applicable law", "venue"],
+      "severity": "high"
+    },
+    {
+      "rule_id": "R015",
+      "category": "Dispute Resolution",
+      "rule_name": "Arbitration Clause",
+      "description": "Dispute resolution mechanism (arbitration/litigation) must be defined",
+      "keywords": ["arbitration", "mediation", "dispute resolution", "litigation"],
+      "severity": "medium"
+    },
+    {
+      "rule_id": "R016",
+      "category": "Compliance",
+      "rule_name": "Regulatory Compliance",
+      "description": "Compliance with applicable laws and regulations must be stated",
+      "keywords": ["compliance", "regulatory", "laws", "regulations", "standards"],
+      "severity": "critical"
+    },
+    {
+      "rule_id": "R017",
+      "category": "Force Majeure",
+      "rule_name": "Force Majeure Provision",
+      "description": "Force majeure events and their consequences must be defined",
+      "keywords": ["force majeure", "act of god", "unforeseen circumstances"],
+      "severity": "low"
+    },
+    {
+      "rule_id": "R018",
+      "category": "Amendment",
+      "rule_name": "Amendment Procedure",
+      "description": "Process for amending the agreement must be clearly outlined",
+      "keywords": ["amendment", "modification", "change", "revision"],
+      "severity": "medium"
+    }
+  ]
+}
