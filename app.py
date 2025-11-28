@@ -23,113 +23,135 @@ st.set_page_config(
 st.markdown("""
 <style>
     .main {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
     }
     .stApp {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
     }
     .block-container {
         padding: 2rem 3rem;
     }
     h1, h2, h3 {
-        color: #ffffff !important;
+        color: #1565c0 !important;
         font-weight: 700;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
     }
     .stButton>button {
-        background: linear-gradient(90deg, #ff6b6b 0%, #ee5a6f 100%);
+        background: linear-gradient(90deg, #1976d2 0%, #1565c0 100%);
         color: white;
         border: none;
         border-radius: 25px;
         padding: 0.75rem 2rem;
         font-weight: 600;
         font-size: 1rem;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        box-shadow: 0 4px 15px rgba(21,101,192,0.3);
         transition: all 0.3s ease;
     }
     .stButton>button:hover {
         transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        box-shadow: 0 6px 20px rgba(21,101,192,0.4);
+        background: linear-gradient(90deg, #1565c0 0%, #0d47a1 100%);
     }
     .upload-box {
-        background: rgba(255,255,255,0.95);
+        background: #ffffff;
         border-radius: 15px;
         padding: 2rem;
-        box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255,255,255,0.2);
+        box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+        border: 2px solid #90caf9;
     }
     .result-card {
-        background: rgba(255,255,255,0.95);
+        background: #ffffff;
         border-radius: 15px;
         padding: 1.5rem;
         margin: 1rem 0;
         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         border-left: 5px solid;
         transition: transform 0.3s ease;
+        color: #212121;
     }
     .result-card:hover {
         transform: translateX(5px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+    .result-card p, .result-card h4 {
+        color: #212121 !important;
     }
     .compliant {
-        border-left-color: #51cf66;
+        border-left-color: #2e7d32;
     }
     .non-compliant {
-        border-left-color: #ff6b6b;
+        border-left-color: #c62828;
     }
     .partial {
-        border-left-color: #ffd43b;
+        border-left-color: #f57c00;
     }
     .stat-box {
-        background: rgba(255,255,255,0.95);
+        background: #ffffff;
         border-radius: 12px;
         padding: 1.5rem;
         text-align: center;
         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         margin: 0.5rem 0;
+        border: 2px solid #90caf9;
     }
     .stat-number {
         font-size: 2.5rem;
         font-weight: 700;
-        background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: #1565c0;
     }
     .stat-label {
         font-size: 0.9rem;
-        color: #666;
+        color: #424242;
         margin-top: 0.5rem;
+        font-weight: 600;
     }
     .sidebar .sidebar-content {
-        background: rgba(255,255,255,0.1);
-        backdrop-filter: blur(10px);
+        background: rgba(255,255,255,0.9);
+    }
+    [data-testid="stSidebar"] {
+        background: linear-gradient(180deg, #e3f2fd 0%, #bbdefb 100%);
+    }
+    [data-testid="stSidebar"] * {
+        color: #1565c0 !important;
     }
     .stProgress > div > div > div {
-        background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(90deg, #1976d2 0%, #1565c0 100%);
     }
     .info-box {
-        background: rgba(255,255,255,0.9);
+        background: #ffffff;
         border-radius: 10px;
         padding: 1rem;
         margin: 1rem 0;
-        border-left: 4px solid #4c6ef5;
+        border-left: 4px solid #1976d2;
+        color: #212121;
+    }
+    .info-box strong {
+        color: #1565c0;
     }
     div[data-testid="stMetricValue"] {
         font-size: 2rem;
         font-weight: 700;
+        color: #1565c0 !important;
+    }
+    div[data-testid="stMetricLabel"] {
+        color: #424242 !important;
     }
     .stTabs [data-baseweb="tab-list"] {
         gap: 8px;
+        background: transparent;
     }
     .stTabs [data-baseweb="tab"] {
-        background-color: rgba(255,255,255,0.2);
+        background-color: #ffffff;
         border-radius: 10px 10px 0 0;
-        color: white;
+        color: #1565c0;
         font-weight: 600;
+        border: 2px solid #90caf9;
+        border-bottom: none;
     }
     .stTabs [aria-selected="true"] {
-        background-color: rgba(255,255,255,0.9);
-        color: #667eea;
+        background-color: #1976d2;
+        color: #ffffff !important;
+        border-color: #1976d2;
     }
     .category-badge {
         display: inline-block;
@@ -140,20 +162,32 @@ st.markdown("""
         margin: 0.2rem;
     }
     .severity-critical {
-        background-color: #ff6b6b;
+        background-color: #c62828;
         color: white;
     }
     .severity-high {
-        background-color: #ff922b;
+        background-color: #ef6c00;
         color: white;
     }
     .severity-medium {
-        background-color: #ffd43b;
-        color: #333;
+        background-color: #f57c00;
+        color: white;
     }
     .severity-low {
-        background-color: #51cf66;
+        background-color: #2e7d32;
         color: white;
+    }
+    label, .stMarkdown, p {
+        color: #212121 !important;
+    }
+    .stTextInput label, .stFileUploader label, .stMultiSelect label {
+        color: #1565c0 !important;
+        font-weight: 600;
+    }
+    .stAlert {
+        background-color: #ffffff !important;
+        border: 2px solid #90caf9 !important;
+        color: #212121 !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -306,7 +340,7 @@ def check_rule_compliance(rule: Dict, retriever, prompt: PromptTemplate, llm) ->
 
 def main():
     st.markdown("<h1 style='text-align: center; margin-bottom: 0;'>🔍 Policy Compliance Checker</h1>", unsafe_allow_html=True)
-    st.markdown("<p style='text-align: center; color: white; font-size: 1.2rem; margin-top: 0;'>AI-Powered Document Compliance Analysis</p>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align: center; color: #1565c0; font-size: 1.2rem; margin-top: 0; font-weight: 600;'>AI-Powered Document Compliance Analysis</p>", unsafe_allow_html=True)
     
     with st.sidebar:
         st.markdown("### ⚙️ Configuration")
@@ -314,8 +348,8 @@ def main():
         
         st.markdown("### 📋 About")
         st.markdown("""
-        <div style='background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 10px; color: white;'>
-        <p>This system analyzes policy documents against compliance rules using AI.</p>
+        <div style='background: #ffffff; padding: 1rem; border-radius: 10px; color: #212121; border: 2px solid #90caf9;'>
+        <p><strong>This system analyzes policy documents against compliance rules using AI.</strong></p>
         <p><strong>Features:</strong></p>
         <ul>
         <li>PDF document processing</li>
