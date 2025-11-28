@@ -9,3 +9,4 @@ chromadb
 pandas
 sentence-transformers
 pypdf
+streamlit

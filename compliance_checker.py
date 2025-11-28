@@ -13,7 +13,7 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.document_loaders import PyPDFLoader
 
 
-GEMINI_API_KEY = "YOUR_API_KEY_HERE"
+GEMINI_API_KEY = "AIzaSyAOh-iZZeJUnuryk56yOoLHw-qTKgFY5_o"
 os.environ["GOOGLE_API_KEY"] = GEMINI_API_KEY
 
 
@@ -165,7 +165,7 @@ Begin your analysis:"""
     )
     
     llm = ChatGoogleGenerativeAI(
-        model="gemini-2.0-flash",
+        model="gemini-2.0-flash-lite",
         temperature=0.1,
         convert_system_message_to_human=True
     )
